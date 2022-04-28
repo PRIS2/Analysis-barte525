@@ -6,7 +6,7 @@ from data import Data
 
 def run_ten(sim):
     result = []
-    for x in range(10):
+    for _ in range(10):
         result.append(sim.run_simulation(False))
     print("min", min(result), "max",  max(result), "avg", sum(result)/len(result), "std", statistics.stdev(result))
 
