@@ -39,12 +39,12 @@ class Simulation:
     def run_simulation(self, plot):
         population = []
         print(self.rows, self.columns, self.machines)
-        for i in range(self.population_size):
+        for _ in range(self.population_size):
             population.append(generate_random_solution(self.rows, self.columns, self.machines))
         generate_random_solution(self.rows, self.columns, self.machines)
         gen = Genetic(self.cost_flow_arr, self.machines, population, self.rows, self.columns)
         self.append_stat(gen)
-        for i in range(1, self.number_of_generations):
+        for _ in range(1, self.number_of_generations):
             if self.tournament_selection:
                 gen.tournament(self.selection_parameter)
             else:
@@ -77,9 +77,9 @@ class Simulation:
     def run_random(self):
         result = []
         obj = Objective(self.cost_flow_arr, self.machines)
-        for x in range(10):
+        for _ in range(10):
             all_v = []
-            for x in range(self.number_of_generations*self.population_size):
+            for _ in range(self.number_of_generations*self.population_size):
                 all_v.append(obj.evaluate_solution(generate_random_solution(self.rows, self.columns, self.machines)))
             result.append(min(all_v))
         print("rmin", min(result), "rmax", max(result), "ravg", sum(result) / len(result), "rstd", statistics.stdev(result))
