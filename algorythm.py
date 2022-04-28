@@ -8,6 +8,7 @@ class Genetic:
     NUMBER_GREATER_THEN_AMOUNT_OF_MACHINES = 999999999
 
     def __init__(self, cost_flow_arr, number_of_machines, population, rows, columns):
+        """Inits SampleClass with blah."""
         self.population_obj = np.array([])
         self.population = population
         self.obj = Objective(cost_flow_arr, number_of_machines)
