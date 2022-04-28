@@ -60,7 +60,7 @@ class Genetic:
             new_population.append(np.copy(self.population[i]))
             if p >= random.random():
                 self.swap_with_repair(gen_change_column, gen_change_row, i, new_population)
-                for j in range(n-1):
+                for _ in range(n-1):
                     gen_change_column, gen_change_row = self.get_neighbor(gen_change_column, gen_change_row, False)
                     self.swap_with_repair(gen_change_column, gen_change_row, i, new_population)
         self.population = new_population
@@ -99,7 +99,7 @@ class Genetic:
 
     def mutate(self, p):
         for arr in self.population:
-            for x in range(self.rows * self.columns):
+            for _ in range(self.rows * self.columns):
                 if p >= random.random():
                     random_row_1 = random.randint(0, self.rows - 1)
                     random_column_1 = random.randint(0, self.columns - 1)
