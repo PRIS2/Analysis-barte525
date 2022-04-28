@@ -140,7 +140,7 @@ class Test(unittest.TestCase):
         return is_ok
 
     def test_crossover_hard(self):
-        for x in range(10):
+        for _ in range(10):
             gen = Genetic(self.cost_flow_arr_h, self.machines_h, self.population_h, self.rows_h, self.columns_h)
             gen.crossover(5, 1)
             for i in range(len(self.population_h) - 1):
