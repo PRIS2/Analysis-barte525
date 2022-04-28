@@ -3,6 +3,7 @@ import numpy as np
 
 class Objective:
     def __init__(self, cost_flow_arr, number_of_machines):
+        """Inits SampleClass with blah."""
         self.cost_flow_arr = cost_flow_arr
         self.number_of_machines = number_of_machines
 
