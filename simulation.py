@@ -1,5 +1,4 @@
 from data import Data
-import numpy as np
 from algorythm import Genetic
 from random_solution import generate_random_solution
 import matplotlib.pyplot as plt
