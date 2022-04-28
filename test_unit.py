@@ -108,20 +108,6 @@ class Test(unittest.TestCase):
                 number[i] += 1
         return number
 
-    def test_tournament_easy(self):
-        gen = Genetic(self.cost_flow_arr_e, self.machines_e, self.population_e, self.rows_e, self.columns_e)
-        result = self.tournament_test(gen, 2)
-        result.sort()
-        assert result[-1] + result[-2] > sum(result) / (len(result) - 1)
-        assert min(result) == 0
-
-    def test_tournament_flat(self):
-        gen = Genetic(self.cost_flow_arr_f, self.machines_f, self.population_f, self.rows_f, self.columns_f)
-        result = self.tournament_test(gen, 2)
-        result.sort()
-        assert result[-1] + result[-2] > sum(result) / (len(result) - 1)
-        assert min(result) == 0
-
     def test_tournament_hard(self):
         gen = Genetic(self.cost_flow_arr_h, self.machines_h, self.population_h, self.rows_h, self.columns_h)
         result = self.tournament_test(gen, 2)
