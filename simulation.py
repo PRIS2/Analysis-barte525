@@ -9,6 +9,7 @@ import statistics
 class Simulation:
     def __init__(self, population_size, number_of_generations, tournament_selection, selection_parameter,
                  genes_to_cross, crossover_probability, mutation_probability, case):
+        """Inits SampleClass with blah."""
         self.population_size = population_size
         self.number_of_generations = number_of_generations
         self.tournament_selection = tournament_selection
